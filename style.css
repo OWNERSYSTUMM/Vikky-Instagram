@@ -39,9 +39,10 @@ body::before{
 }
 
 .tick{
-  width:16px;
-  height:16px;
+  width:14px;        /* 👈 small Instagram-like size */
+  height:14px;
   object-fit:contain;
+  display:inline-block;
 }
 
 /* PROFILE CARD */
