@@ -72,7 +72,8 @@ body::before{
 }
 
 .tick{
-  width:14px;
+  width:30px;
+  height:30px;
 }
 
 /* PROFILE */
