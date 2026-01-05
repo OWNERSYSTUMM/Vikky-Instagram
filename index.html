@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vikky Instagram</title>
+
+<!-- CSS LINK -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash">
+  <div>
+    <h2>Welcome to Anand Instagram👋</h2>
+    <p>Tap to enter</p>
+  </div>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- COVER -->
+<div class="cover"></div>
+
+<!-- PROFILE -->
+<div class="profile">
+
+  <div class="username">
+    anandyaduvanshi7793 <img src="assets/tick.png" class="tick">
+  </div>
+
+  <div class="top">
+    <div class="dp">
+      <img src="assets/dp.jpg">
+    </div>
+
+    <div class="stats">
+      <div><span>180</span>Posts</div>
+      <div><span>1.9K</span>Followers</div>
+      <div><span>617</span>Following</div>
+    </div>
+  </div>
+
+  <div class="bio">
+  <b>꧁༒☬❤️ UP 61 GHAZIPUR ❤️☬༒꧂</b><br><br>
+
+  ꧁༒☬𝙰𝚗𝚊𝚗𝚍☬༒꧂⚔️<br>
+  ꧁ঔৣ☬✞𝚢𝚊𝚍𝚞𝚟𝚊𝚗𝚜𝚑𝚒✞☬ঔৣ꧂<br><br>
+
+  ꧁𓊈𒆜 ꧁❤︎༒︎ ༒︎❤︎꧂ 𒆜𓊉꧂<br><br>
+
+  ꧁༒☬☠ᴷᶦᶰᵍ᭄YT☜☠︎☬༒꧂<br>
+  ᴹᴿ°᭄Ƴส∂คv ℑᎥ࿐<br>
+  ᴹᴿ°᭄यादव ℑᎥ࿐<br>
+  ꧁༒Ƴส∂คv ℑᎥ༒꧂
+</div>
+
+  <div class="buttons">
+  <a href="https://instagram.com/anandyaduvanshi7793" target="_blank">Follow</a>
+  <a href="https://instagram.com/direct/t/anandyaduvanshi7793" target="_blank">Message</a>
+</div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="highlights">
+    <div class="highlight">
+      <div class="circle"><img src="assets/h1.jpg"></div>Edit
+    </div>
+    <div class="highlight">
+      <div class="circle"><img src="assets/h2.jpg"></div>Reels
+    </div>
+    <div class="highlight">
+      <div class="circle"><img src="assets/h3.jpg"></div>Gaming
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid">
+    <div class="post">
+      <img src="assets/p1.jpg">
+      <img src="assets/reel.png" class="reel">
+    </div>
+    <div class="post"><img src="assets/p2.jpg"></div>
+    <div class="post">
+      <img src="assets/p3.jpg">
+      <img src="assets/reel.png" class="reel">
+    </div>
+    <div class="post"><img src="assets/p4.jpg"></div>
+    <div class="post"><img src="assets/p5.jpg"></div>
+    <div class="post">
+      <img src="assets/p6.jpg">
+      <img src="assets/reel.png" class="reel">
+    </div>
+  </div>
+
+</div>
+
+<!-- JS (music + splash) -->
+<script>
+const splash = document.getElementById("splash");
+const music  = document.getElementById("bgMusic");
+music.volume = 0.15;
+
+splash.addEventListener("click", () => {
+  splash.style.display = "none";
+  music.play();
+});
+</script>
+
+</body>
+</html>
