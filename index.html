@@ -10,12 +10,18 @@
 
 <body>
 
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
 <!-- BACKGROUND IMAGE -->
 <div class="bg"></div>
 
 <!-- HEADER -->
 <div class="header">
   anandyaduvanshi7793
+  <span class="music-btn" onclick="toggleMusic()">🔊</span>
 </div>
 
 <!-- PROFILE CARD -->
@@ -67,6 +73,23 @@
   <img src="assets/p5.jpg">
   <img src="assets/p6.jpg">
 </div>
+
+<!-- JS FOR MUSIC -->
+<script>
+const music = document.getElementById("bgMusic");
+let playing = false;
+
+function toggleMusic(){
+  if(!playing){
+    music.volume = 0.3;
+    music.play();
+    playing = true;
+  }else{
+    music.pause();
+    playing = false;
+  }
+}
+</script>
 
 </body>
 </html>
