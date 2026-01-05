@@ -36,8 +36,6 @@ body::before{
   display:inline-flex;
   align-items:center;
   gap:6px;
-
-  margin-left:3px;   /* 👈 LEFT shift */
 }
 
 .tick{
