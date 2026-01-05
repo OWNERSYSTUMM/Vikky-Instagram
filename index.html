@@ -5,110 +5,118 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vikky Instagram</title>
 
-<!-- CSS LINK -->
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* VIDEO FIX */
+.post video,
+.circle video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* REEL ICON */
+.reel{
+  position:absolute;
+  right:6px;
+  top:6px;
+  width:20px;
+}
+
+/* POST BOX */
+.post{
+  position:relative;
+  overflow:hidden;
+}
+</style>
 </head>
 
 <body>
 
-<!-- SPLASH SCREEN -->
+<!-- SPLASH -->
 <div id="splash">
-  <div>
-    <h2>Welcome to Anand Instagram👋</h2>
-    <p>Tap to enter</p>
-  </div>
+  <h2>Welcome to Anand Instagram 👋</h2>
+  <p>Tap to enter</p>
 </div>
 
-<!-- BACKGROUND MUSIC -->
+<!-- MUSIC -->
 <audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- COVER -->
-<div class="cover"></div>
-
-<!-- PROFILE -->
 <div class="profile">
 
-  <div class="username">
-    anandyaduvanshi7793 <img src="assets/tick.png" class="tick">
+<!-- HIGHLIGHTS -->
+<div class="highlights">
+  <div class="highlight">
+    <div class="circle">
+      <video muted loop playsinline onclick="toggleSound(this)">
+        <source src="assets/h1.mp4" type="video/mp4">
+      </video>
+    </div>
+    Edit
   </div>
 
-  <div class="top">
-    <div class="dp">
-      <img src="assets/dp.jpg">
+  <div class="highlight">
+    <div class="circle">
+      <video muted loop playsinline onclick="toggleSound(this)">
+        <source src="assets/h2.mp4" type="video/mp4">
+      </video>
     </div>
-
-    <div class="stats">
-      <div><span>180</span>Posts</div>
-      <div><span>1.9K</span>Followers</div>
-      <div><span>617</span>Following</div>
-    </div>
+    Reels
   </div>
 
-  <div class="bio">
-  <b>꧁༒☬❤️ UP 61 GHAZIPUR ❤️☬༒꧂</b><br><br>
-
-  ꧁༒☬𝙰𝚗𝚊𝚗𝚍☬༒꧂⚔️<br>
-  ꧁ঔৣ☬✞𝚢𝚊𝚍𝚞𝚟𝚊𝚗𝚜𝚑𝚒✞☬ঔৣ꧂<br><br>
-
-  ꧁𓊈𒆜 ꧁❤︎༒︎ ༒︎❤︎꧂ 𒆜𓊉꧂<br><br>
-
-  ꧁༒☬☠ᴷᶦᶰᵍ᭄YT☜☠︎☬༒꧂<br>
-  ᴹᴿ°᭄Ƴส∂คv ℑᎥ࿐<br>
-  ᴹᴿ°᭄यादव ℑᎥ࿐<br>
-  ꧁༒Ƴส∂คv ℑᎥ༒꧂
+  <div class="highlight">
+    <div class="circle">
+      <img src="assets/h3.jpg">
+    </div>
+    Gaming
+  </div>
 </div>
 
-  <div class="buttons">
-  <a href="https://instagram.com/anandyaduvanshi7793" target="_blank">Follow</a>
-  <a href="https://instagram.com/direct/t/anandyaduvanshi7793" target="_blank">Message</a>
-</div>
+<!-- GRID -->
+<div class="grid">
 
-  <!-- HIGHLIGHTS -->
-  <div class="highlights">
-    <div class="highlight">
-      <div class="circle"><video src="assets/h1.mp4"></div>Edit
-    </div>
-    <div class="highlight">
-      <div class="circle"><video src="assets/h2.mp4"></div>Reels
-    </div>
-    <div class="highlight">
-      <div class="circle"><video src="assets/h3.jpg"></div>Gaming
-    </div>
+  <div class="post">
+    <video muted loop playsinline onclick="toggleSound(this)">
+      <source src="assets/p1.mp4" type="video/mp4">
+    </video>
+    <img src="assets/reel.png" class="reel">
   </div>
 
-  <!-- GRID -->
-  <div class="grid">
-    <div class="post">
-      <video src="assets/p1.mp4">
-      <img src="assets/reel.png" class="reel">
-    </div>
-    <div class="post"><video src="assets/p2.mp4"></div>
-    <div class="post">
-      <video src="assets/p3.mp4">
-      <img src="assets/reel.png" class="reel">
-    </div>
-    <div class="post"><img src="assets/p4.jpg"></div>
-    <div class="post"><img src="assets/p5.jpg"></div>
-    <div class="post">
-      <img src="assets/p6.jpg">
-      <img src="assets/reel.png" class="reel">
-    </div>
+  <div class="post">
+    <video muted loop playsinline onclick="toggleSound(this)">
+      <source src="assets/p2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="post">
+    <video muted loop playsinline onclick="toggleSound(this)">
+      <source src="assets/p3.mp4" type="video/mp4">
+    </video>
+    <img src="assets/reel.png" class="reel">
   </div>
 
 </div>
 
-<!-- JS (music + splash) -->
+</div>
+
+<!-- JS -->
 <script>
 const splash = document.getElementById("splash");
 const music  = document.getElementById("bgMusic");
-music.volume = 0.15;
 
-splash.addEventListener("click", () => {
+splash.onclick = () => {
   splash.style.display = "none";
+  music.volume = 0.15;
   music.play();
-});
+};
+
+function toggleSound(video){
+  video.muted = !video.muted;
+  video.play();
+}
 </script>
 
 </body>
