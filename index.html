@@ -1,123 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vikky Instagram</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-/* VIDEO FIX */
-.post video,
-.circle video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* REEL ICON */
-.reel{
-  position:absolute;
-  right:6px;
-  top:6px;
-  width:20px;
-}
-
-/* POST BOX */
-.post{
-  position:relative;
-  overflow:hidden;
-}
-</style>
-</head>
-
-<body>
-
-<!-- SPLASH -->
-<div id="splash">
-  <h2>Welcome to Anand Instagram 👋</h2>
-  <p>Tap to enter</p>
-</div>
-
-<!-- MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
 <div class="profile">
 
-<!-- HIGHLIGHTS -->
-<div class="highlights">
-  <div class="highlight">
-    <div class="circle">
+  <!-- USERNAME -->
+  <div class="username">
+    anandyaduvanshi7793
+    <img src="assets/tick.png" class="tick">
+  </div>
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="dp">
+      <img src="assets/dp.jpg">
+    </div>
+
+    <div class="stats">
+      <div><span>180</span>Posts</div>
+      <div><span>1.9K</span>Followers</div>
+      <div><span>617</span>Following</div>
+    </div>
+  </div>
+
+  <!-- BIO -->
+  <div class="bio">
+    ꧁༒☬❤️ UP 61 GHAZIPUR ❤️☬༒꧂<br>
+    ꧁༒☬𝙰𝚗𝚊𝚗𝚍☬༒꧂⚔️
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <a href="#">Follow</a>
+    <a href="#">Message</a>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="highlights">
+    <div class="highlight">
+      <div class="circle">
+        <video muted loop playsinline onclick="toggleSound(this)">
+          <source src="assets/h1.mp4" type="video/mp4">
+        </video>
+      </div>
+      Edit
+    </div>
+
+    <div class="highlight">
+      <div class="circle">
+        <video muted loop playsinline onclick="toggleSound(this)">
+          <source src="assets/h2.mp4" type="video/mp4">
+        </video>
+      </div>
+      Reels
+    </div>
+
+    <div class="highlight">
+      <div class="circle">
+        <img src="assets/h3.jpg">
+      </div>
+      Gaming
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid">
+    <div class="post">
       <video muted loop playsinline onclick="toggleSound(this)">
-        <source src="assets/h1.mp4" type="video/mp4">
+        <source src="assets/p1.mp4" type="video/mp4">
+      </video>
+      <img src="assets/reel.png" class="reel">
+    </div>
+
+    <div class="post">
+      <video muted loop playsinline onclick="toggleSound(this)">
+        <source src="assets/p2.mp4" type="video/mp4">
       </video>
     </div>
-    Edit
-  </div>
 
-  <div class="highlight">
-    <div class="circle">
+    <div class="post">
       <video muted loop playsinline onclick="toggleSound(this)">
-        <source src="assets/h2.mp4" type="video/mp4">
+        <source src="assets/p3.mp4" type="video/mp4">
       </video>
+      <img src="assets/reel.png" class="reel">
     </div>
-    Reels
-  </div>
-
-  <div class="highlight">
-    <div class="circle">
-      <img src="assets/h3.jpg">
-    </div>
-    Gaming
-  </div>
-</div>
-
-<!-- GRID -->
-<div class="grid">
-
-  <div class="post">
-    <video muted loop playsinline onclick="toggleSound(this)">
-      <source src="assets/p1.mp4" type="video/mp4">
-    </video>
-    <img src="assets/reel.png" class="reel">
-  </div>
-
-  <div class="post">
-    <video muted loop playsinline onclick="toggleSound(this)">
-      <source src="assets/p2.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <div class="post">
-    <video muted loop playsinline onclick="toggleSound(this)">
-      <source src="assets/p3.mp4" type="video/mp4">
-    </video>
-    <img src="assets/reel.png" class="reel">
   </div>
 
 </div>
-
-</div>
-
-<!-- JS -->
-<script>
-const splash = document.getElementById("splash");
-const music  = document.getElementById("bgMusic");
-
-splash.onclick = () => {
-  splash.style.display = "none";
-  music.volume = 0.15;
-  music.play();
-};
-
-function toggleSound(video){
-  video.muted = !video.muted;
-  video.play();
-}
-</script>
-
-</body>
-</html>
