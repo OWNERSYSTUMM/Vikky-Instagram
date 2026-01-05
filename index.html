@@ -4,25 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anand Yaduvanshi</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BACKGROUND MUSIC -->
+<!-- 🎵 BACKGROUND MUSIC -->
 <audio id="bgMusic" loop>
   <source src="assets/music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- BACKGROUND IMAGE -->
+<!-- ✨ MAGIC ENTRY SCREEN -->
+<div id="magicScreen">
+  <div class="magicBox">
+    <div class="magicIcon">✨</div>
+    <h2>Tap for Magic</h2>
+    <p>Enter Anand’s World</p>
+    <button onclick="enterSite()">Enter</button>
+  </div>
+</div>
+
+<!-- 🌄 BACKGROUND IMAGE -->
 <div class="bg"></div>
 
-<!-- HEADER WITH PNG BLUE TICK -->
+<!-- HEADER -->
 <div class="header">
   <span class="username">
     anandyaduvanshi7793
-    <img src="assets/tick.png" class="tick" alt="verified">
+    <img src="assets/tick.png" class="tick">
   </span>
 </div>
 
@@ -46,19 +55,16 @@
   <!-- FULL BIO -->
   <div class="bio">
     ꧁༒☬❤️ UP 61 GHAZIPUR ❤️☬༒꧂<br><br>
-
     ꧁༒☬𝙰𝚗𝚊𝚗𝚍☬༒꧂ ⚔️<br>
     ꧁ঔৣ☬✞𝚢𝚊𝚍𝚞𝚟𝚊𝚗𝚜𝚑𝚒✞☬ঔৣ꧂<br><br>
-
     ꧁𓊈𒆜 ꧁❤︎༒︎ ༒︎❤︎꧂ 𒆜𓊉꧂<br><br>
-
     ꧁༒☬☠ᴷᶦᶰᵍ᭄YT☜☠︎☬༒꧂<br>
     ᴹᴿ°᭄Ƴส∂คv ℑᎥ࿐<br>
     ᴹᴿ°᭄यादव ℑᎥ࿐<br>
     ꧁༒Ƴส∂คv ℑᎥ༒꧂
   </div>
 
-  <!-- WORKING BUTTONS -->
+  <!-- BUTTONS -->
   <div class="buttons">
     <a class="btn" href="https://www.instagram.com/anandyaduvanshi7793/" target="_blank">Follow</a>
     <a class="btn" href="https://www.instagram.com/direct/t/anandyaduvanshi7793/" target="_blank">Message</a>
@@ -76,18 +82,18 @@
   <img src="assets/p6.jpg">
 </div>
 
-<!-- MUSIC PLAY ON FIRST TOUCH -->
+<!-- 🔻 WATERMARK -->
+<div class="watermark">Made by Vikky</div>
+
+<!-- 🔥 MAGIC + MUSIC SCRIPT -->
 <script>
 const music = document.getElementById("bgMusic");
-let started = false;
 
-document.addEventListener("click", () => {
-  if (!started) {
-    music.volume = 0.3;
-    music.play();
-    started = true;
-  }
-}, { once: true });
+function enterSite(){
+  music.volume = 0.3;
+  music.play();
+  document.getElementById("magicScreen").style.display = "none";
+}
 </script>
 
 </body>
