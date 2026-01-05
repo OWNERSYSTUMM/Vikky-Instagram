@@ -18,10 +18,12 @@
 <!-- BACKGROUND IMAGE -->
 <div class="bg"></div>
 
-<!-- HEADER -->
+<!-- HEADER WITH PNG BLUE TICK -->
 <div class="header">
-  anandyaduvanshi7793
-  <span class="music-btn" onclick="toggleMusic()">🔊</span>
+  <span class="username">
+    anandyaduvanshi7793
+    <img src="assets/tick.png" class="tick" alt="verified">
+  </span>
 </div>
 
 <!-- PROFILE CARD -->
@@ -56,10 +58,10 @@
     ꧁༒Ƴส∂คv ℑᎥ༒꧂
   </div>
 
-  <!-- BUTTONS -->
+  <!-- WORKING BUTTONS -->
   <div class="buttons">
-    <button>Following</button>
-    <button>Message</button>
+    <a class="btn" href="https://www.instagram.com/anandyaduvanshi7793/" target="_blank">Follow</a>
+    <a class="btn" href="https://www.instagram.com/direct/t/anandyaduvanshi7793/" target="_blank">Message</a>
   </div>
 
 </div>
@@ -74,21 +76,18 @@
   <img src="assets/p6.jpg">
 </div>
 
-<!-- JS FOR MUSIC -->
+<!-- MUSIC PLAY ON FIRST TOUCH -->
 <script>
 const music = document.getElementById("bgMusic");
-let playing = false;
+let started = false;
 
-function toggleMusic(){
-  if(!playing){
+document.addEventListener("click", () => {
+  if (!started) {
     music.volume = 0.3;
     music.play();
-    playing = true;
-  }else{
-    music.pause();
-    playing = false;
+    started = true;
   }
-}
+}, { once: true });
 </script>
 
 </body>
