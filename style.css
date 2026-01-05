@@ -5,7 +5,7 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
-/* 🌄 BACKGROUND IMAGE */
+/* BACKGROUND IMAGE */
 .bg{
   position:fixed;
   inset:0;
@@ -22,7 +22,7 @@ body::before{
   z-index:-1;
 }
 
-/* ✨ MAGIC SCREEN */
+/* MAGIC SCREEN */
 #magicScreen{
   position:fixed;
   inset:0;
@@ -43,7 +43,6 @@ body::before{
   animation:spin 2.5s linear infinite;
 }
 
-/* MAGIC BUTTON */
 .magicBox button{
   margin-top:18px;
   padding:12px 28px;
@@ -57,7 +56,6 @@ body::before{
   animation:pulse 1.6s infinite;
 }
 
-/* ANIMATIONS */
 @keyframes pulse{
   0%{box-shadow:0 0 0 0 rgba(29,161,242,.6);}
   70%{box-shadow:0 0 0 18px rgba(29,161,242,0);}
@@ -79,7 +77,6 @@ body::before{
   font-weight:bold;
 }
 
-/* USERNAME + TICK */
 .username{
   display:inline-flex;
   align-items:center;
@@ -87,11 +84,11 @@ body::before{
 }
 
 .tick{
-  width:25px;
-  height:25px;
+  width:14px;
+  height:14px;
 }
 
-/* PROFILE CARD */
+/* PROFILE */
 .card{
   max-width:430px;
   margin:6px auto;
@@ -99,7 +96,6 @@ body::before{
   color:#fff;
 }
 
-/* TOP */
 .top{
   display:flex;
   align-items:center;
@@ -130,11 +126,11 @@ body::before{
   font-size:18px;
 }
 
-/* BIO */
 .name{
   margin-top:10px;
   font-weight:bold;
 }
+
 .bio{
   font-size:14px;
   line-height:1.5;
@@ -170,9 +166,27 @@ body::before{
   width:100%;
   aspect-ratio:1/1;
   object-fit:cover;
+  cursor:pointer;
 }
 
-/* 🔻 WATERMARK */
+/* FULLSCREEN VIEWER */
+#viewer{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9998;
+}
+
+#viewer img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:10px;
+}
+
+/* WATERMARK */
 .watermark{
   position:fixed;
   right:10px;
