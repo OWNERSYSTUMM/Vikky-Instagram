@@ -74,18 +74,23 @@
 
 <!-- PHOTO GRID -->
 <div class="grid">
-  <img src="assets/p1.jpg">
-  <img src="assets/p2.jpg">
-  <img src="assets/p3.jpg">
-  <img src="assets/p4.jpg">
-  <img src="assets/p5.jpg">
-  <img src="assets/p6.jpg">
+  <img src="assets/p1.jpg" onclick="openViewer(this.src)">
+  <img src="assets/p2.jpg" onclick="openViewer(this.src)">
+  <img src="assets/p3.jpg" onclick="openViewer(this.src)">
+  <img src="assets/p4.jpg" onclick="openViewer(this.src)">
+  <img src="assets/p5.jpg" onclick="openViewer(this.src)">
+  <img src="assets/p6.jpg" onclick="openViewer(this.src)">
 </div>
 
-<!-- 🔻 WATERMARK -->
+<!-- FULLSCREEN VIEWER -->
+<div id="viewer" onclick="closeViewer()">
+  <img id="viewerImg">
+</div>
+
+<!-- WATERMARK -->
 <div class="watermark">Made by Vikky</div>
 
-<!-- 🔥 MAGIC + MUSIC SCRIPT -->
+<!-- JS -->
 <script>
 const music = document.getElementById("bgMusic");
 
@@ -93,6 +98,15 @@ function enterSite(){
   music.volume = 0.3;
   music.play();
   document.getElementById("magicScreen").style.display = "none";
+}
+
+function openViewer(src){
+  document.getElementById("viewerImg").src = src;
+  document.getElementById("viewer").style.display = "flex";
+}
+
+function closeViewer(){
+  document.getElementById("viewer").style.display = "none";
 }
 </script>
 
