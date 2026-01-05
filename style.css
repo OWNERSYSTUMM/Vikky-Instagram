@@ -39,8 +39,8 @@ body::before{
 }
 
 .tick{
-  width:16px;        /* 👈 small Instagram-like size */
-  height:16px;
+  width:20px;        /* 👈 small Instagram-like size */
+  height:20px;
   object-fit:contain;
   display:inline-block;
 }
