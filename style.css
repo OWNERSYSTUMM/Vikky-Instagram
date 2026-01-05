@@ -5,7 +5,7 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
-/* BACKGROUND IMAGE */
+/* BACKGROUND PHOTO */
 .bg{
   position:fixed;
   inset:0;
@@ -24,7 +24,6 @@ body::before{
 
 /* HEADER */
 .header{
-  position:relative;
   padding:15px;
   text-align:center;
   color:#fff;
@@ -32,13 +31,17 @@ body::before{
   font-weight:bold;
 }
 
-/* MUSIC BUTTON */
-.music-btn{
-  position:absolute;
-  right:15px;
-  top:15px;
-  cursor:pointer;
-  font-size:20px;
+/* USERNAME + PNG TICK */
+.username{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+.tick{
+  width:16px;
+  height:16px;
+  object-fit:contain;
 }
 
 /* PROFILE CARD */
@@ -99,11 +102,12 @@ body::before{
   gap:10px;
   margin-top:12px;
 }
-.buttons button{
+.btn{
   flex:1;
   padding:8px;
   border-radius:8px;
-  border:none;
+  text-align:center;
+  text-decoration:none;
   background:#262626;
   color:#fff;
   font-weight:bold;
