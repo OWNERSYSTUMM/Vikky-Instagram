@@ -1,109 +1,44 @@
-:root{
-  --bg:#fafafa;
-  --card:#fff;
-  --text:#000;
-  --border:#dbdbdb;
-}
-
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#000;
-    --card:#121212;
-    --text:#fff;
-    --border:#262626;
-  }
-}
-
 *{
   box-sizing:border-box;
 }
 
 body{
   margin:0;
-  padding:0;
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
-  background:var(--bg);
-  color:var(--text);
-  min-height:100vh;
-  overflow-y:auto;
-}
-
-/* SPLASH */
-#splash{
-  position:fixed;
-  inset:0;
-  background:linear-gradient(135deg,#8334af,#dd2a7b,#f58529);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#000;
   color:#fff;
-  text-align:center;
-}
-#splash h2{
-  margin:0;
-  font-size:28px;
-}
-#splash p{
-  margin-top:8px;
-  font-size:16px;
-  opacity:.9;
 }
 
-/* COVER */
-.cover{
-  height:160px;   /* FIXED (no full screen) */
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(131,52,175,.55),
-      rgba(221,42,123,.35),
-      rgba(0,0,0,.15)
-    ),
-    url("assets/cover.jpg") center/cover no-repeat;
+/* HEADER */
+.header{
+  padding:12px;
+  border-bottom:1px solid #222;
+  text-align:center;
 }
 
 /* PROFILE */
 .profile{
   max-width:430px;
-  margin:-50px auto 0; /* overlap fix */
-  background:var(--card);
-  padding:14px;
-  border-radius:16px 16px 0 0;
-  position:relative;
-  z-index:5;
+  margin:auto;
+  padding:15px;
 }
 
-.username{
-  font-size:18px;
-  font-weight:600;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-.tick{
-  width:16px;
-}
-
-/* TOP */
 .top{
   display:flex;
   align-items:center;
-  margin-top:10px;
 }
 
 .dp{
   width:90px;
   height:90px;
   border-radius:50%;
-  background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
-  padding:3px;
+  overflow:hidden;
+  border:3px solid #dd2a7b;
 }
 .dp img{
   width:100%;
   height:100%;
-  border-radius:50%;
-  border:3px solid var(--card);
+  object-fit:cover;
 }
 
 .stats{
@@ -113,90 +48,45 @@ body{
   text-align:center;
 }
 .stats span{
-  font-weight:600;
   display:block;
+  font-weight:bold;
 }
 
 .bio{
-  font-size:14px;
   margin-top:10px;
+  font-size:14px;
 }
 
-/* BUTTONS */
 .buttons{
   display:flex;
-  gap:8px;
+  gap:10px;
   margin-top:12px;
 }
-.buttons a{
+.buttons button{
   flex:1;
   padding:8px;
+  background:#121212;
+  color:#fff;
+  border:1px solid #333;
   border-radius:6px;
-  border:1px solid var(--border);
-  background:var(--card);
-  font-weight:600;
-  text-decoration:none;
-  color:var(--text);
-  text-align:center;
-}
-
-/* HIGHLIGHTS */
-.highlights{
-  display:flex;
-  gap:12px;
-  margin-top:16px;
-  overflow-x:auto;
-}
-.highlight{
-  text-align:center;
-  font-size:12px;
-}
-.highlight .circle{
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  border:2px solid var(--border);
-  padding:3px;
-  overflow:hidden;
-}
-.highlight img,
-.highlight video{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
+  font-weight:bold;
 }
 
 /* GRID */
 .grid{
+  max-width:430px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:2px;
-  margin-top:15px;
 }
 
 .post{
-  position:relative;
   aspect-ratio:1/1;
-  overflow:hidden;
+  background:#111;
 }
-
-.post img,
-.post video{
+.post img{
   width:100%;
   height:100%;
   object-fit:cover;
-}
-
-.post video{
-  display:block;
-}
-
-/* REEL ICON */
-.reel{
-  position:absolute;
-  top:6px;
-  right:6px;
-  width:16px;
-  z-index:3;
 }
